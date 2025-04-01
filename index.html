@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meghana Batchalakuri | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      scroll-behavior: smooth;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.1), transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+      transition: background 0.2s ease;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      z-index: 1;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      z-index: 1;
+    }
+    .header-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 1;
+    }
+    .header-buttons a {
+      background: #4f46e5;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .header-buttons a:hover {
+      background: #4338ca;
+    }
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #93c5fd;
+      font-size: 2rem;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: calc(33% - 1rem);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #facc15;
+      font-size: 1.3rem;
+    }
+    .card a {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+    footer {
+      background: #1e293b;
+      padding: 2rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+    footer a {
+      color: #60a5fa;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      .header-buttons a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+      }
+      .card {
+        width: 100%;
+      }
+      .projects {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Meghana Batchalakuri</h1>
+    <p>Aspiring Full Stack Developer | Java & AI Enthusiast</p>
+    <div class="header-buttons">
+      <a href="mailto:meghanabatchalakuri@gmail.com">Contact Me</a>
+      <a href="/resume.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate software developer with a strong foundation in Java, Python, and web technologies.
+      I love building meaningful projects, especially in full stack and AI domains.
+    </p>
+    <p><strong>Skills:</strong> HTML, CSS, JavaScript, Java, Python, SQL, UI/UX, Figma</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>To-Do List App</h3>
+        <p>Task manager with real-time updates and local storage. Designed with Figma.</p>
+        <a href="https://github.com/mmeeghana">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Habit Tracker</h3>
+        <p>Tracker with daily/weekly analytics and color-coded progress visualization.</p>
+        <a href="https://github.com/mmeeghana">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>AI Animation Generator</h3>
+        <p>Hackathon project to generate animations using AI tools for educational content.</p>
+        <a href="https://github.com/mmeeghana">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Certifications & Achievements</h2>
+    <div class="achievements">
+      <div class="achievement-card">
+        <h3>Google AI-ML Internship (AICTE)</h3>
+        <p>Hands-on experience in developing machine learning models and exploring real-world AI applications.</p>
+      </div>
+      <div class="achievement-card">
+        <h3>Java Full Stack Internship</h3>
+        <p>Built scalable applications using Java, Spring Boot, and MySQL, optimizing performance by 30%.</p>
+      </div>
+      <div class="achievement-card">
+        <h3>Web Development - EduSkills Academy</h3>
+        <p>Completed 80+ hours mastering frontend skills and built 5+ responsive websites from scratch.</p>
+      </div>
+      <div class="achievement-card">
+        <h3>NCICCN Volunteer</h3>
+        <p>Contributed to organizing tech community events and networking initiatives at college.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Connect with me: 
+      <a href="mailto:meghanabatchalakuri@gmail.com">Email</a> | 
+      <a href="https://www.linkedin.com/in/meghana-batchalakuri/" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/mmeeghana" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Gradient glow effect
+    const header = document.getElementById('header');
+    header.addEventListener('mousemove', e => {
+      const rect = header.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      header.style.setProperty('--x', `${x}px`);
+      header.style.setProperty('--y', `${y}px`);
+    });
+  </script>
+</body>
+</html>
